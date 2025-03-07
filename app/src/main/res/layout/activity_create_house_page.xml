@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCFCFC"
+    tools:context=".auth_initial.CreateHousePage">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ImageAcc"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedImageView"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/EmailTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/outfit_semibold"
+        android:letterSpacing="0"
+        android:lineSpacingMultiplier="1.4"
+        android:text="your email"
+        android:textAlignment="textStart"
+        android:textColor="#1C4984"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ImageAcc"
+        app:layout_constraintStart_toEndOf="@+id/ImageAcc"
+        app:layout_constraintTop_toTopOf="@+id/ImageAcc" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/CreateYourHouse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/outfit_bold"
+                android:letterSpacing="0"
+                android:text="Create Your Home"
+                android:textColor="#1C4984"
+                android:textSize="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/HouseTxt"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:hint="Your House's Name"
+
+                android:textColorHint="#7B8DA3"
+                app:boxStrokeColor="#1C4984"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CreateYourHouse"
+                app:startIconDrawable="@drawable/baseline_home_24"
+                app:startIconTint="@color/blue_main">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#1C4984" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CardHexNbr"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/outfit_light"
+                android:hint="ID Card Code"
+                android:textColorHint="#7B8DA3"
+
+                app:boxStrokeColor="#1C4984"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/HouseTxt"
+                app:startIconDrawable="@drawable/baseline_nfc_24"
+                app:startIconTint="@color/blue_main">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="1ABC34339FD23"
+                    android:textColor="#1C4984" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/KeypadPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:ems="10"
+                android:hint="Password"
+
+                android:textColorHint="#7B8DA3"
+                app:boxStrokeColor="@color/blue_main"
+                app:endIconMode="password_toggle"
+                app:endIconTint="#7B8DA3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CardHexNbr"
+                app:startIconDrawable="@drawable/baseline_lock_24"
+                app:startIconTint="@color/blue_main">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberPassword"
+                    android:textColor="#1C4984" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/HouseCreation"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="42dp"
+                android:background="@drawable/button_next"
+                android:backgroundTint="#1C4984"
+                android:drawableRight="@drawable/baseline_arrow_right_24"
+                android:drawableTint="#fff"
+                android:fontFamily="@font/outfit_medium"
+                android:letterSpacing="0"
+                android:paddingLeft="30dp"
+                android:paddingRight="15dp"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/CancelCreateHouse" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/CancelCreateHouse"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/button_next"
+                android:backgroundTint="#FF0000"
+                android:drawableLeft="@drawable/baseline_cancel_24"
+                android:drawableTint="#fff"
+                android:fontFamily="@font/outfit_medium"
+                android:letterSpacing="0"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/KeypadPassword" />
+
+            <ImageView
+                android:id="@+id/logosmarthousename"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="32dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CancelCreateHouse"
+                app:srcCompat="@drawable/smarthousestaticname" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

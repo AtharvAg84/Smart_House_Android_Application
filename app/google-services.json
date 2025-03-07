@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "189677643516",
+    "project_id": "os-banking-manage",
+    "storage_bucket": "os-banking-manage.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189677643516:android:9c7a4c98dc79ef3a2ed979",
+        "android_client_info": {
+          "package_name": "com.example.smarthome"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe9YTMAfBx7Holu_joxa3sCQVVKgTkBNs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

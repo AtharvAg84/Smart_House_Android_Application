@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    tools:context=".fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/signup_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+            app:srcCompat="@drawable/user_image" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/outfit_bold"
+            android:text="Hello ,  "
+            android:textColor="@color/blue_main"
+            android:textSize="18dp"
+            app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+            app:layout_constraintTop_toTopOf="@+id/appCompatImageView" />
+
+        <TextView
+            android:id="@+id/UsernameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_medium"
+            android:text="Atharv Agarwal"
+            android:textColor="@color/blue_main"
+            android:textSize="18dp"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/DevicesTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/outfit_medium"
+            android:text="12 devices On"
+            android:textColor="#92A5C6"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/UsernameTxt" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/Door"
+            android:layout_width="40dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/door_background_closed"
+
+            android:clickable="true"
+            android:scaleX="2.2"
+            android:scaleY="2.2"
+            android:src="@drawable/open_door_v1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appCompatImageView"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/houses_button_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:background="@drawable/back_arrow_background"
+            android:drawableRight="@drawable/baseline_arrow_drop_down_24"
+            android:fontFamily="@font/outfit_bold"
+            android:text="My Home"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_main"
+            app:layout_constraintStart_toStartOf="@+id/appCompatImageView"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatImageView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/frame2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageView2"
+                android:layout_width="344dp"
+                android:layout_height="230dp"
+                android:scaleY="1.1"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/weath_backgroud" />
+
+            <TextView
+                android:id="@+id/CityTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Chennai, "
+                android:textColor="#B4D8FF"
+                app:layout_constraintStart_toStartOf="@+id/appCompatImageView2"
+                app:layout_constraintTop_toTopOf="@+id/appCompatImageView2" />
+
+            <TextView
+                android:id="@+id/Country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_medium"
+                android:text=" India"
+                android:textColor="#B4D8FF"
+                app:layout_constraintStart_toEndOf="@+id/CityTxt"
+                app:layout_constraintTop_toTopOf="@+id/CityTxt" />
+
+            <TextView
+                android:id="@+id/StateWeather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Little Rain"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                app:layout_constraintStart_toStartOf="@+id/CityTxt"
+                app:layout_constraintTop_toBottomOf="@+id/Country" />
+
+            <TextView
+                android:id="@+id/WeatherDescribtion"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Lowing the temperature , below 16°C out cost by 80°C"
+                android:textColor="#B4D8FF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/StateWeather"
+                app:layout_constraintTop_toBottomOf="@+id/StateWeather" />
+
+            <TextView
+                android:id="@+id/TempDegree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/outfit_medium"
+                android:text="18 °C"
+                android:textColor="#fff"
+                android:textSize="35dp"
+                app:layout_constraintStart_toStartOf="@+id/WeatherDescribtion"
+                app:layout_constraintTop_toBottomOf="@+id/WeatherDescribtion" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageWeather"
+                android:layout_width="126dp"
+                android:layout_height="157dp"
+                android:layout_marginStart="208dp"
+                android:layout_marginTop="40dp"
+                android:scaleX="1.2"
+                android:scaleY="1.2"
+                app:layout_constraintStart_toStartOf="@+id/appCompatImageView2"
+                app:layout_constraintTop_toTopOf="@+id/appCompatImageView2"
+                app:srcCompat="@drawable/cloud_weather" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalscrollview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fillViewport="true"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatImageView2">
+
+                <LinearLayout
+                    android:id="@+id/RoomLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp">
+
+                    <RadioGroup
+                        android:id="@+id/radioRoom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:checkedButton="@id/button_1"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/button_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="12dp"
+                            android:background="@drawable/state"
+                            android:button="@null"
+                            android:fontFamily="@font/outfit_medium"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text="Living Room"
+                            android:textAllCaps="false"
+                            android:textColor="@color/radio_button_text_colors" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/button_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="12dp"
+                            android:background="@drawable/state"
+                            android:button="@null"
+                            android:fontFamily="@font/outfit_medium"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text="Kitchen"
+                            android:textAllCaps="false"
+                            android:textColor="@color/radio_button_text_colors" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/button_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="12dp"
+                            android:background="@drawable/state"
+                            android:button="@null"
+                            android:fontFamily="@font/outfit_medium"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text="Bedroom"
+                            android:textAllCaps="false"
+                            android:textColor="@color/radio_button_text_colors" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/button_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="12dp"
+                            android:background="@drawable/state"
+                            android:button="@null"
+                            android:fontFamily="@font/outfit_medium"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text="Bathroom"
+                            android:textAllCaps="false"
+                            android:textColor="@color/radio_button_text_colors" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <!--            <FrameLayout-->
+            <!--                android:id="@+id/DeviceFrame"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/horizontalscrollview"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent" />-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/DeviceContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:background="#f0f0f0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalscrollview" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</FrameLayout>
